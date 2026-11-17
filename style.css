@@ -63,10 +63,9 @@ ul, ol { list-style: none; }
 .hero-actions { display: flex; flex-direction: column; gap: 10px; }
 
 .hero-photo {
-  width: 160px; height: 160px; border-radius: 50%;
-  background: var(--bg-alt); border: 1px solid var(--line);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--muted); flex-shrink: 0;
+  width: 200px; height: auto; border-radius: var(--radius);
+  background: var(--bg-alt); flex-shrink: 0;
+  box-shadow: 0 8px 24px rgba(26, 34, 51, 0.15);
 }
 
 .btn {
@@ -142,7 +141,7 @@ ul, ol { list-style: none; }
   .hero-inner { flex-direction: row; justify-content: space-between; text-align: left; }
   .hero h1 { font-size: 2.4rem; }
   .hero-actions { flex-direction: row; }
-  .hero-photo { width: 240px; height: 240px; }
+  .hero-photo { width: 320px; }
 
   .stats-grid { grid-template-columns: repeat(4, 1fr); }
   .card-grid { grid-template-columns: repeat(2, 1fr); }
