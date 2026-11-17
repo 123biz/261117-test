@@ -63,7 +63,7 @@ ul, ol { list-style: none; }
 .hero-actions { display: flex; flex-direction: column; gap: 10px; }
 
 .hero-photo {
-  width: 200px; height: auto; border-radius: var(--radius);
+  display: block; width: 180px; height: 180px; border-radius: 50%; object-fit: cover;
   background: var(--bg-alt); flex-shrink: 0;
   box-shadow: 0 8px 24px rgba(26, 34, 51, 0.15);
 }
@@ -130,6 +130,20 @@ ul, ol { list-style: none; }
 
 .footer { padding: 24px 0; text-align: center; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); }
 
+/* 앱 설치 안내 배너 (모바일 전용) */
+.install-banner {
+  position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 20;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
+  background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 14px; box-shadow: 0 8px 24px rgba(26, 34, 51, 0.2);
+}
+.install-banner[hidden] { display: none; }
+.install-banner img { border-radius: 10px; }
+.install-banner p { flex: 1; min-width: 0; font-size: 0.95rem; font-weight: 500; }
+.install-actions { display: flex; gap: 8px; width: 100%; }
+.install-actions .btn { flex: 1; padding: 10px; }
+.install-actions .btn[hidden] { display: none; }
+
 /* 태블릿 이상 */
 @media (min-width: 768px) {
   .menu-btn { display: none; }
@@ -141,7 +155,7 @@ ul, ol { list-style: none; }
   .hero-inner { flex-direction: row; justify-content: space-between; text-align: left; }
   .hero h1 { font-size: 2.4rem; }
   .hero-actions { flex-direction: row; }
-  .hero-photo { width: 320px; }
+  .hero-photo { width: 320px; height: auto; border-radius: var(--radius); }
 
   .stats-grid { grid-template-columns: repeat(4, 1fr); }
   .card-grid { grid-template-columns: repeat(2, 1fr); }
